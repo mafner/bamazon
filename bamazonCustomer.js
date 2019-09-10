@@ -14,3 +14,15 @@ var connection = mysql.createConnection({
 	password: '',
 	database: 'Bamazon'
 });
+
+// validateInput ensures user input is a positive number > 0
+function validateInput(value) {
+	var integer = Number.isInteger(parseFloat(value));
+	var sign = Math.sign(value);
+
+	if (integer && (sign === 1)) {
+		return true;
+	} else {
+		return 'Please enter a whole number that is greater than zero.';
+	}
+}
