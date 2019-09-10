@@ -1,0 +1,28 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "A CLI-based storefront with the MySQL database backend.",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafner/bamazon"
+  },
+  "keywords": [
+    "storefront",
+    "CLI-storefront",
+    "store"
+  ],
+  "author": "Matt Hefner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mafner/bamazon/issues"
+  },
+  "homepage": "https://github.com/mafner/bamazon/blob/master/README.md",
+  "dependencies": {
+    "inquirer": "^3.0.6",
+    "mysql": "^2.13.0"
+  }
+}
