@@ -1,6 +1,7 @@
 -- Database called 'Bamazon'. Switch into this to run this activity --
-CREATE DATABASE Bamazon;
-USE Bamazon;
+DROP DATABASE IF EXISTS bamazon;
+CREATE DATABASE bamazon;
+USE bamazon;
 
 -- Table created: 'products'. Contains store inventory --
 CREATE TABLE products (
