@@ -11,8 +11,8 @@ var connection = mysql.createConnection({
 	user: 'root',
 
 	// Your password
-	password: '',
-	database: 'Bamazon'
+	password: 'password',
+	database: 'bamazon'
 });
 
 // Presents menu options and funcitons to manager
@@ -68,22 +68,25 @@ function displayInventory() {
 
 	// Creates/calls db query
 	connection.query(queryStr, function(err, data) {
-		if (err) throw err;
+		if (err) {
+			console.log(err)
+		}
 
 		console.log('Existing Inventory: ');
 		console.log('...................\n');
 
 		var strOut = '';
-		for (var i = 0; i < data.length; i++) {
-			strOut = '';
-			strOut += 'Item ID: ' + data[i].item_id + '  //  ';
-			strOut += 'Product Name: ' + data[i].product_name + '  //  ';
-			strOut += 'Department: ' + data[i].department_name + '  //  ';
-			strOut += 'Price: $' + data[i].price + '  //  ';
-			strOut += 'Quantity: ' + data[i].stock_quantity + '\n';
+		console.log(data)
+		// for (var i = 0; i < data.length; i++) {
+		// 	strOut = '';
+		// 	strOut += 'Item ID: ' + data[i].item_id + '  //  ';
+		// 	strOut += 'Product Name: ' + data[i].product_name + '  //  ';
+		// 	strOut += 'Department: ' + data[i].department_name + '  //  ';
+		// 	strOut += 'Price: $' + data[i].price + '  //  ';
+		// 	strOut += 'Quantity: ' + data[i].stock_quantity + '\n';
 
-			console.log(strOut);
-		}
+		// 	console.log(strOut);
+		// }
 
 	  	console.log("---------------------------------------------------------------------\n");
 

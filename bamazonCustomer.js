@@ -11,8 +11,8 @@ var connection = mysql.createConnection({
 	user: 'root',
 
 	// Your password
-	password: '',
-	database: 'Bamazon'
+	password: 'password',
+	database: 'bamazon'
 });
 
 // validateInput ensures user input is a positive number > 0
@@ -105,7 +105,9 @@ function displayInventory() {
 
 	// Make the db query
 	connection.query(queryStr, function(err, data) {
-		if (err) throw err;
+		if (err){
+			console.log(err)
+		}
 
 		console.log('Existing Inventory: ');
 		console.log('...................\n');
